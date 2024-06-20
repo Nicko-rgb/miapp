@@ -1,9 +1,16 @@
 .navegador{
+    border: red soli;
+    position: sticky;
+    top: 0px;
+}
+.navegador nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 70px;
-    background: green;
+    background: rgb(79, 203, 223);
+    width: 100%;
+    z-index: 1;
 }
 .navegador  .link{
     text-decoration: none;

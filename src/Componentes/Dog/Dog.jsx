@@ -1,6 +1,6 @@
-import './dog.css'
-import { useState, useEffect } from "react"
-import Navegador from '../Navegador/Nav'
+import './dog.css';
+import { useState, useEffect } from "react";
+import Navegador from '../Navegador/Nav';
 
 const Dog = () => {
     const [dog, setDog] = useState([]);
@@ -24,14 +24,19 @@ const Dog = () => {
             <Navegador />
             <h1 id="texto">Lista de Perros</h1>
             <div className="cards">
-                {dog.map((dog, index) => (
-                    <div key={index} className="card">
-                        <h2>{dog.name}</h2>
-                        <p>{dog.origin}</p>
+                {dog.filter((data) => data.name.toLowerCase().includes("australian")).map((data) => (
+                    <div className="card">
+                        <h3>{data.name}</h3>
+                        <p>{data.country_code}</p>
+                        <p>{data.bred_for}</p>
+                        <p>{data.breed_grou} </p>
+                        <p>{data.life_span} </p>
+                        <p>{data.temperament} </p>
                     </div>
                 ))}
             </div>
         </div>
-    )
-}
-export default Dog
+    );
+};
+
+export default Dog;
