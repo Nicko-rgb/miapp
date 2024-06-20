@@ -1,0 +1,12 @@
+.navegador{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background: green;
+}
+.navegador  .link{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
