@@ -5,7 +5,7 @@
 }
 .navegador nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 70px;
     background: rgb(79, 203, 223);
@@ -16,4 +16,8 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 5px;
+}
+.navegador .link:hover{
+    background: rgb(21, 136, 140);
 }

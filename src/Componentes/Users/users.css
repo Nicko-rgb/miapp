@@ -1,0 +1,19 @@
+.users{
+    height: 100vh;
+    overflow-y: auto;
+}
+.users h2{
+    text-align: center;
+}
+.users .cards{
+    display:  grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 4vw;
+}
+.users .cards .card{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(6, 205, 255);
+    background: rgb(226, 248, 248);
+}
