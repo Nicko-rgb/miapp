@@ -4,25 +4,25 @@ import './registro.css'
 import Users from "../../data"
 
 const Registro = () => {
-    const [nombre, setNombre] = useState('');
-    const [correo, setCorreo] = useState('');
-    const [edad, setEdad] = useState('');
+    const [nombre, setNombre] = useState('')
+    const [correo, setCorreo] = useState('')
+    const [edad, setEdad] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const newUser = {
             nombre,
             correo,
-            edad: parseInt(edad),
-        };
-        if(nombre == "" || correo == "" || edad == ""){
+            edad
+        }
+        if(nombre === "" || correo === "" || edad === ""){
             alert("Completa los campos")
         }
         else{
             Users.push(newUser);
             alert("Registro Exitoso")
         }
-    };
+    }
 
     return (
         <div className="registro">
