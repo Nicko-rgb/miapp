@@ -28,6 +28,7 @@ const Registro = () => {
         <div className="registro">
             <Navegador />
             <div className="subRegistro">
+                <h1>Registro de Usuario</h1>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Nombre</label>

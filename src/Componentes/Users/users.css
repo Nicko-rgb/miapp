@@ -1,9 +1,10 @@
 .users{
-    height: 100vh;
+    position: relative;
     overflow-y: auto;
 }
 .users h2{
     text-align: center;
+    margin-top: 80px;
 }
 .users .cards{
     display:  grid;
@@ -16,4 +17,16 @@
     border-radius: 10px;
     box-shadow: 0 0 5px rgb(6, 205, 255);
     background: rgb(226, 248, 248);
+}
+.users .cards .card div{
+    display: flex;
+    justify-content: right;
+}
+.cards .card .btn{
+    padding: 7px;
+    border: none;
+    background: rgb(0, 146, 156);
+    border-radius:  6px;
+    color: white;
+    cursor: pointer;
 }
