@@ -1,0 +1,25 @@
+.datadisplay{
+    display: flex;
+    flex-direction: column;
+}
+.datadisplay .subData{
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    padding: 15px;
+}
+.subData h2{
+    text-align: center;
+}
+.subData div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.subData li{
+    box-shadow: 0 0 2px green;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}

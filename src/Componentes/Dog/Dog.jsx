@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 import Navegador from '../Navegador/Nav';
 
 const Dog = () => {
-    const [dog, setDog] = useState([]);
+    const [perro, nombrePerro] = useState([]);
 
     useEffect(() => {
         const fetchCharacter = async () => {
             try {
-                const response = await fetch("https://api.thedogapi.com/v1/breeds");
-                const data = await response.json();
-                setDog(data);
+                const listaDatos = await fetch("https://api.thedogapi.com/v1/breeds");
+                const data = await listaDatos.json();
+                nombrePerro(data);
             } catch (error) {
                 console.log("Error:", error);
             }
@@ -24,7 +24,7 @@ const Dog = () => {
             <Navegador />
             <h1 id="texto">Lista de Perros</h1>
             <div className="cards">
-                {dog.filter((data) => data.name.toLowerCase().includes("australian")).map((data) => (
+                {perro.filter((data) => data.name.toLowerCase().includes("australian")).map((data) => (
                     <div className="card">
                         <h3>{data.name}</h3>
                         <p>{data.country_code}</p>
