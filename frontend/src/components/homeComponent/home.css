@@ -1,0 +1,194 @@
+.home{
+    background-image: url('https://www.prasaga.com/wp-content/uploads/2022/11/PoW-Images_0002_PoW3-2400x1260.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.home .navegador{
+    background-color: #1c1c1c; 
+}
+.home h1{
+    font-family: 'poppins';
+    font-weight: 800;
+    -webkit-text-stroke: 1.5px #007bff;
+    text-shadow: 0 0 20px aqua,
+                0 0 20px aqua,
+                0 0 20px aqua;
+}
+.home .home-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: -30px;
+    animation: fadeIn 0.5s ease;
+}
+.home .home-content .div1, .div2{
+    height: 400px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #1c1c1cad;
+    box-shadow: 0 0 4px #007bff ;
+    border: #007bff solid 1px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    position: relative;
+    z-index: 0;
+}
+.home .home-content .div1{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 70% 100%, 0% 100%);
+    margin-right: -90px;
+    display: flex;
+    justify-content: left;
+}
+.home .home-content .div2{
+    clip-path: polygon(30% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.home .home-content img{
+    position: absolute;
+    z-index: 2;
+    width: 120px;
+}
+.home .home-content section{
+    position: absolute;
+    background-color: white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    z-index: 1;
+    z-index: 2;
+}
+.home .home-content .diag{
+    height: 425px;
+    box-shadow: 0 0 1px #007bff, 0 0 1px #007bff, 0 0 1px #007bff;
+    width: .07px;
+    margin: 15px;
+    transform: rotate(20.5deg);
+    z-index: 1;
+}
+.home .home-content .div1 h2{
+    text-align: left;
+    color: #007bff;
+    text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white;
+    font-weight: 800;
+    margin: 0;
+}
+.home .div1 p{
+    text-align: left;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+.home .div1 .icons{
+    position: absolute;
+    max-width: 250px;
+    width: 100%;
+    bottom: 50px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.home .icons .ico{
+    font-size: 25px;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 0 0 3px;
+    animation: pulse .5s infinite alternate;
+}
+.home .icons .ico:hover{
+    box-shadow: 0 0 10px;
+    background-color: rgb(26, 25, 25);
+}
+.home .icons .fb{
+    color: #253bff;
+    box-shadow: #253bff;
+}
+.home .icons .wt{
+    color: green;
+    box-shadow: green;
+}
+.home .icons .gh{
+    color: white;
+    box-shadow: white;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.home .div2 h2{
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    color: aqua;
+    text-shadow: 0 0 3px rgb(215, 21, 137), 0 0 3px rgb(215, 21, 137);
+    font-weight: 800;
+}
+
+.home .div2 .code{
+    background-color: #070611; /* Color de fondo ligero */
+    padding: 0px 10px;
+    white-space: pre-wrap;
+    text-align: left;
+    max-width: 280px;
+    width: 100%;
+    box-shadow: 0 0 3px aqua, 0 0 3px aqua;
+    display: flex;
+    margin-top: 0px;
+}
+.home .div2 .code span {
+    color: white;
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+    color: aqua;
+    text-shadow: 0 0 3px #007bff;
+}
+
+.home .div2 .code .num{
+    color: aqua;
+    font-weight: bold;
+    font-size: 13px;
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+}
+.home .imgs{
+    display: flex;
+    justify-content: space-evenly;
+    animation: fadeIn 0.5s ease;
+}
+.home .imgs img{
+    width: 300px;
+    object-fit: cover;
+    transition: .5s ease;
+}
+.home .imgs img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 3px aqua, 0 0 3px aqua;
+}

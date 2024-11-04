@@ -4,35 +4,106 @@
     justify-content: space-between;
     background-color: #1c1c1c; 
     box-sizing: border-box;
+    box-shadow: #007bff 0 0 4px ;
     color: white;
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
-    height: 70px;
-    width: 100%;
+    height: 60px;
+    width: calc(100%);
     padding: 0 20px;
+    z-index: 500;
 }
-.navegador .logoimg{
+
+.navegador .logoimg {
     width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse-shadow .5s infinite alternate;
 }
-.navegador .logoimg img{
-    width: 100%;
+
+@keyframes pulse-shadow {
+    from {
+        box-shadow: 
+            inset 0 0 5px #007bff,
+            inset 0 0 5px #007bff,
+            0 0 5px #007bff,
+            0 0 5px #007bff;
+    }
+    
+    to {
+        box-shadow: 
+            inset 0 0 10px #007bff, /* Aumenta la intensidad */
+            inset 0 0 10px #007bff,
+            0 0 15px #007bff,
+            0 0 15px #007bff; /* Aumenta la intensidad */
+    }
 }
-.navegador .menu{
+.navegador .logoimg .blanco{
+    position: absolute;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.navegador .logoimg img {
+    width: 90%;
+    animation: rotar 5s infinite linear;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navegador .menu {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-.navegador .menu .link-nav{
+
+.navegador .menu .link-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    transition: .3s ease;
-    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que Poppins esté importada */
+    color: white; 
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
 }
-.navegador .menu .link-nav:hover{
-    background-color: #2f2f2f;
+
+.navegador .menu .link-nav:hover {
+    background-color: #2f2f2f; /* Color al pasar el mouse */
+}
+
+.navegador .menu .link-nav.active {
+    background-color: #007bff; 
+    border-radius: 5px;
+    font-weight: 600;
+}
+.navegador .menu .ico1{
+    font-size: 17px;
+    margin-top: -2px;
+}
+
+.navegador .menu .ico2 {
+    font-size: 18px;
+}
+.navegador .menu .ico3{
+    font-size: 20px;
 }

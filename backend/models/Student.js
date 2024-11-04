@@ -15,6 +15,18 @@ const Student = sequelize.define('Student',{
     lastName: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    email:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
 })
 

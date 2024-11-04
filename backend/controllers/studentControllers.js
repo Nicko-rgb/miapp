@@ -1,8 +1,8 @@
 const Student = require('../models/Student')
 
-const createStudentController =  async ({id, firstName, lastName}) => {
+const createStudentController =  async ({id, firstName, lastName, email, age, phone}) => {
     try {
-        const newStudent = await Student.create({id, firstName, lastName})
+        const newStudent = await Student.create({id, firstName, lastName, email, age, phone})
         return newStudent
     } catch (error) {
         throw new Error(error.message)

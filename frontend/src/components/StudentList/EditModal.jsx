@@ -9,6 +9,9 @@ const EditModal = ({ student, onClose }) => {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
+        email: '',
+        age: '',
+        phone: ''
     });
 
     // Establece los datos del estudiante al montar el componente
@@ -17,6 +20,9 @@ const EditModal = ({ student, onClose }) => {
             setFormData({
                 firstName: student.firstName,
                 lastName: student.lastName,
+                email: student.email,
+                age: student.age,
+                phone: student.phone
             });
         }
     }, [student]);
@@ -44,24 +50,57 @@ const EditModal = ({ student, onClose }) => {
                 <form onSubmit={handleSubmit}>
                     <label>
                         First Name:
-                        <input 
-                            type="text" 
-                            name="firstName" 
-                            value={formData.firstName} 
-                            onChange={handleChange} 
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
                             required
                         />
                     </label>
                     <label>
                         Last Name:
-                        <input 
-                            type="text" 
-                            name="lastName" 
-                            value={formData.lastName} 
-                            onChange={handleChange} 
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
                             required
                         />
                     </label>
+                    <label>
+                        Email:
+                        <input
+                            type="text"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </label>
+                    <div>
+                        <label>
+                            Phone:
+                            <input
+                                type="text"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                            />
+                        </label>
+                        <label>
+                            Age:
+                            <input
+                                type="text"
+                                name="age"
+                                value={formData.age}
+                                onChange={handleChange}
+                                required
+                            />
+                        </label>
+                    </div>
+
                     <div className="btns">
                         <button type="submit" className='btn-save'>
                             <IoCheckmarkDoneSharp /> Save

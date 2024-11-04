@@ -28,7 +28,7 @@ const useStudentStore = create((set) => ({
             console.log('Error deleting student:', error.message);
         }
     },
-    updateStudent: async (id, updatedData) => { // Nuevo método para actualizar estudiante
+    updateStudent: async (id, updatedData) => {
         try {
             const response = await axios.put(`http://localhost:3001/student/${id}`, updatedData);
             console.log('Estudiante actualizado:', response.data);
